@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>расписание</title>
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style_test.css" rel="stylesheet">
+    <title>Document</title>
     <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
 </head>
 <body>
-    
     <div id="main_logo">
         <div id="bg_header">
             <img src="img/01.png" alt="">
@@ -25,25 +24,29 @@
     </div>
 
     <div class="wrapper">
+
         <header>
             <span id="program"><b>ПРОГРММА</b></span> <br>
             МЕЖРЕГИОНАЛЬНОГО МНОГОПРОФИЛЬНОГО <br>
             ХАКАТОНА <b>«НА ВЗЛЁТ»!</b> <br>
             г.Новосибирск
         </header>
-        
-        <div class="main">
+
+        <main>
             <div class="root">
                 <div class="day-container"></div>
                 <div class="container-container">
                     <div class="time-event-container"></div>
                 </div>
             </div>
-        </div>
-        
-        <footer><div class="clock"></div></footer>
-        
+        </main>
+
+        <footer>
+            <div class="clock"></div>
+        </footer>
+
     </div>
+
 
     <script src="js/main.js"></script>
     <script src="js/flight.js"></script>
