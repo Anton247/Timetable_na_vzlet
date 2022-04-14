@@ -5,4 +5,4 @@ function animation() {
 
 
 // повторить с интервалом 2 секунды
-let timerId = setInterval(animation, 10000);
+let timerIdFlight = setInterval(animation, 10000);

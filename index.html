@@ -7,15 +7,11 @@
     <title>расписание</title>
     <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
-    
+    <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
 </head>
 <body>
-    <header>
-        <span id="program"><b>ПРОГРММА</b></span> <br>
-        МЕЖРЕГИОНАЛЬНОГО МНОГОПРОФИЛЬНОГО <br>
-        ХАКАТОНА <b>«НА ВЗЛЁТ»!</b> <br>
-        г.Новосибирск
-    </header>
+    
     <div id="main_logo">
         <div id="bg_header">
             <img src="img/01.png" alt="">
@@ -27,6 +23,30 @@
             <img src="img/03.png" alt="">
         </div>
     </div>
-    <script src="js/flight.js"></script>
+
+    <div class="wrapper">
+        <header>
+            <span id="program"><b>ПРОГРММА</b></span> <br>
+            МЕЖРЕГИОНАЛЬНОГО МНОГОПРОФИЛЬНОГО <br>
+            ХАКАТОНА <b>«НА ВЗЛЁТ»!</b> <br>
+            г.Новосибирск
+        </header>
+        
+        <div class="main">
+            <div class="root">
+                <div class="day-container"></div>
+                <div class="container-container">
+                    <div class="time-event-container"></div>
+                </div>
+            </div>
+        </div>
+        
+
+        <footer><div class="clock"></div></footer>
+        <script src="js/main.js"></script>
+        <script src="js/flight.js"></script>
+        <script src="js/index.js"></script>
+        <script src="js/time.js"></script>
+    </div>
 </body>
 </html>

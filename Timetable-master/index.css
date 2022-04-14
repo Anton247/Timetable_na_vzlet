@@ -1,0 +1,39 @@
+body {
+    margin:0px;
+    font-size: 14pt;
+}
+
+.root {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.day-container {
+    display: flex;
+    justify-content: center;
+}
+
+.container-container {
+    display: flex;
+    justify-content: center;
+}
+
+.time-event-container {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+
+.event {
+    text-align: center;
+}
+
+.event-label {
+    width:25%;
+    max-width:25%;
+}
+
+.time {
+    text-align: center;
+}
