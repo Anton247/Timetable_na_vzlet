@@ -12,12 +12,12 @@
     position: absolute;
     left: 0;
     top: 0;
-    width: 70%;
-    height: 70%;
+    width: 60%;
+    height: 60%;
     max-width: 85%;
     min-height: 50%;
     max-height: 85%;
-    z-index: 1;
+    z-index: -1;
   }
   
  
@@ -72,10 +72,10 @@ html {
   header {
     /*background: blue;*/
     text-align: right;
-    font-size: 40px;
+    font-size: 25px;
     padding-top: 20px;
     padding-right: 30px;
-    color: #0e53a0
+    color: #0f54a0
   }
   
   main {
@@ -90,18 +90,20 @@ html {
   }
 
   .clock {
-    font-size: 60px;
+    font-family: "Exo2-Medium";
+    font-size: 90px;
     vertical-align: bottom;
     display: flex;
     align-items: flex-end;
     padding-bottom: 50px;
     padding-left: 50px;
+    color: #0f54a0;
   }
 
 
 
   #program{
-    font-size: 80px;
+    font-size: 60px;
     font-family: "Exo2-Medium";
   }
   #flight{
@@ -142,7 +144,7 @@ html {
     justify-content: center;
     color: #d71e2e;
     font-family: "Exo2-Medium";
-    font-size: 50px;
+    font-size: 40px;
   }
 
   .time-container{
@@ -155,6 +157,14 @@ html {
       padding: 10px;
       min-width: 170px;
       min-height: 50px;
+      
+  }
+
+  .time-label{
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
   }
 
   .event-container{
@@ -193,11 +203,17 @@ html {
   .event-label {
     /*width:25%;
     max-width:25%;*/
+    display: flex;
+      height: 100%;
+      align-items: center;
+    justify-content: center;
   }
 
   .place-label{
       display: flex;
       height: 100%;
+      align-items: center;
+    justify-content: center;
   }
   
   .time {
@@ -205,7 +221,7 @@ html {
   }
 
 .QR_img:first-child{
-    padding-right: 200px;
+    padding-right: 250px;
 }
 
 .QR_img{
@@ -214,19 +230,17 @@ html {
 
   }
 
-
-
   table {
     display: grid;
     border-collapse: collapse;
-    padding-left: 25%;
-    width: 95%;
+    padding-left: 20%;
+    width: 98%;
     text-align: center;
-    font-size: 30px;
+    font-size: 20px;
     grid-template-columns: 
       minmax(150px, 1fr)
-      minmax(150px, 1.67fr)
-      minmax(150px, 1.67fr)
+      minmax(150px, 3fr)
+      minmax(150px, 2fr)
   }
 
   thead,
@@ -237,7 +251,7 @@ html {
   
   th,
   td {
-    padding: 15px;
+    padding: 10px;
     overflow: hidden;
     text-overflow: ellipsis;
   }
@@ -245,9 +259,9 @@ html {
   th {
     position: sticky;
     top: 0;
-    background: #0e53a0;
+    background: #0f54a0;
     font-weight: normal;
-    font-size: 2.1rem;
+    font-size: 1.0rem;
     color: white;
   }
   
@@ -256,15 +270,12 @@ html {
   }
   
   td {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 7px;
+    padding-bottom: 5px;
     color: #000000;
+    font-size: 1.64rem;
   }
   
-  tr:nth-child(even) td {
-    background: #f8f6ff;
-  }
-
   .center{
       display: inline-block; 
       text-align: left;

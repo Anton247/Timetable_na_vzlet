@@ -17,7 +17,7 @@
 
 timetable = {
 
-    '6': {
+    '2': {
         '10:00-10:30': ['Регистрация', 'Ресепшен детского технопарка «Кванториум»'],
         '10:30-11:00': ['Церемония открытия Хакатона', 'Лекторий'],
         '11:00-13:00': ['Работа над кейсом', 'Площадки проведений трека'],
@@ -26,14 +26,14 @@ timetable = {
         '15:30-17:00': ['Check – point 1', 'Площадки проведения треков'],   
     },
     
-    '3':{
+    '6':{
         '9:50-10:00': ['Брифинг', 'Лекторий'],
         '10:00-13:00': ['Работа над кейсом', 'Площадки проведений трека'],
         '11:00-11:30': ['МК «Структурные основы успешной презентации»', 'Лекторий'],
         '11:30-13:00': ['Check – point 2', 'Площадки проведения треков'],
         '13:00-14:00': ['Технический перерыв', ' '],
         '14:00-17:00': ['Работа над кейсом', 'Площадки проведения треков'],
-        '15:00-16:00': ['МК «Основные методы и приёмы для успешного выступления»', 'Лекторий'], 
+        '15:00-19:50': ['МК «Основные методы и приёмы для успешного выступления»', 'Лекторий'], 
     },
 
     '4':{
@@ -114,14 +114,10 @@ function add_event(){
         time = key;
         event_v = timetable[day][key][0]
         place = timetable[day][key][1]
-        str += "<td>" + '<div class="center">' + time + '</div>' + "</td> <td>" + event_v +"</td> <td>" + place +"</td>"  //table[key][0]
+        str += "<td>" + '<div class="time-label">' + time + '</div>' + "</td> <td>" + '<div class="event-label">' + event_v + "</div>" +"</td> <td>" + '<div class="place-label">' + place + "</div>"+"</td>"  //table[key][0]
         el.innerHTML =str 
         table.append(el);
     }
-    
-    
-    
-    
 }
 
 let time_event_container = document.getElementsByClassName('time-event-container')
@@ -139,7 +135,7 @@ function update_timetable(){
         //time_container(time_event_container[0])
         //event_container(time_event_container[0])
         //place_container(time_event_container[0])
-
+        location.reload()
         add_event()
     }
 }
