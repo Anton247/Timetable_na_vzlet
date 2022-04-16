@@ -17,7 +17,7 @@
 
 timetable = {
 
-    '2': {
+    '6': {
         '10:00-10:30': ['Регистрация', 'Ресепшен детского технопарка «Кванториум»'],
         '10:30-11:00': ['Церемония открытия Хакатона', 'Лекторий'],
         '11:00-13:00': ['Работа над кейсом', 'Площадки проведений трека'],
@@ -129,11 +129,12 @@ let time_event_container = document.getElementsByClassName('time-event-container
 //event_container(time_event_container[0])
 //place_container(time_event_container[0])
 add_event()
-let prevDay = Date().getDay();
+let now = new Date()
+let prevDay = now.getDay();
 
 function update_timetable(){
     let time_event_container = document.getElementsByClassName('time-event-container')
-    let curDay = Date().getDay();
+    let curDay = new Date().getDay();
     if(curDay != prevDay){
         //time_container(time_event_container[0])
         //event_container(time_event_container[0])
