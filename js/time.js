@@ -2,8 +2,14 @@ let times = document.getElementsByClassName('time-label')
 let events = document.getElementsByClassName('event-label')
 let place = document.getElementsByClassName('place-label')
 let a;
+let play = 0;
 
 function time_change(){
+    let time_min = 0;
+    let time_max = 0;
+    let cur_time = 0;
+    let check = 0;
+    
     for (let i = 0; i<times.length; i++) {
         let date = new Date()
         let hours = date.getHours()
@@ -33,8 +39,16 @@ function time_change(){
         
         h1min = time1_hours * 60 + time1_minutes;
         h2min = time2_hours * 60 + time2_minutes;
+        if(time_min == 0)
+            time_min = h1min
+        else if(h1min < time_min)
+            time_min = h1min
+
+        if(h2min > time_max)
+            time_max = h2min
+            
         hmin = hours * 60 + minutes;
-        
+        cur_time = hmin;
         if (hmin >= h1min && hmin <= h2min){
             
                 times[i].style.backgroundColor = '#185698';
@@ -45,10 +59,11 @@ function time_change(){
                 place[i].style.color = 'white'
                 events[i].style.fontWeight = 'bold';
                 place[i].style.fontWeight = 'bold';
+                check += 1;
                 continue
             
         }
-
+        
         times[i].style.backgroundColor = 'transparent';
         events[i].style.backgroundColor = 'transparent';  
         place[i].style.backgroundColor = 'transparent';
@@ -56,8 +71,23 @@ function time_change(){
         events[i].style.color = 'black';  
         place[i].style.color = 'black';
         events[i].style.fontWeight = 'normal';
-        place[i].style.fontWeight = 'normal';   
-            
+        place[i].style.fontWeight = 'normal';         
+    }
+
+    if(check == 0 &&  abs(cur_time - time_min) > 2 && play == 0){
+        let elem = document.getElementById("video_source");
+        elem.src = "videos/Заставка _01.mp4"
+        play = 1
+    }
+    else if(check == 0 &&  abs(cur_time - time_max) > 2 && play == 0){
+        let elem = document.getElementById("video_source");
+        elem.src = "videos/Заставка _01.mp4"
+        play = 1
+    }
+    else if(check != 0 && play == 1){
+        let elem = document.getElementById("video_source");
+        elem.src = ""
+        play = 0
     }
 }   
 time_change()

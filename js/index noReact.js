@@ -56,52 +56,6 @@ timetable = {
 
 
 
-function time_container(props){
-    let now = new Date();
-    let day = now.getDay();
-    let el = document.createElement('div')
-    el.className = "time-container"
-    str = ""
-    for(let key in table[day]){
-        console.log(key)
-        str += "<div class='time'>" + "<span class='time-label'>" + key + "</span>"  + "</div>"  //table[key][0]
-    }
-    el.innerHTML =str
-    props.append(el);
-}
-
-function event_container(props){
-    let now = new Date();
-    let day = now.getDay();
-    let el = document.createElement('div')
-    el.className = "event-container"
-    str = ""
-    for(let key in table[day]){
-        console.log(table[day][key][0])
-        str += "<div class='event'>" + "<span class='event-label'>" + table[day][key][0] + "</span>"  + "</div>"  //table[key][0]
-    }
-    el.innerHTML =str
-    props.append(el);
-    
-}
-
-function place_container(props){
-
-    let now = new Date();
-    let day = now.getDay();
-
-    let el = document.createElement('div')
-    el.className = "place-container"
-    str = ""
-    for(let key in table[day]){
-        console.log(table[day][key][0])
-        str += "<div class='place'>" + "<span class='place-label'>" + table[day][key][1] + "</span>"  + "</div>"  //table[key][0]
-    }
-    el.innerHTML =str
-    props.append(el);
-    
-}
-
 function add_event(){
     let table = document.getElementById('main_body')
     
