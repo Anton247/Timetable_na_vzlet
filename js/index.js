@@ -1,18 +1,18 @@
-// function TimeCard(props){
-//     return (
-//             /*#__PURE__*/React.createElement("div", {className: "time-container"},
-//             [...Array(Object.keys(props.tablet).length)].map((n, i) => /*#__PURE__*/React.createElement('div', {className: "time", key: i},
-//             React.createElement('span', {className: "time-label"}, Object.keys(props.tablet)[i]))))
-//         )
-// }
+function TimeCard(props){
+    return (
+            /*#__PURE__*/React.createElement("div", {className: "time-container"},
+            [...Array(Object.keys(props.tablet).length)].map((n, i) => /*#__PURE__*/React.createElement('div', {className: "time", key: i},
+            React.createElement('span', {className: "time-label"}, Object.keys(props.tablet)[i]))))
+        )
+}
 
-// function EventCard(props){
-//     return (
-//             /*#__PURE__*/React.createElement("div", {className: "event-container"},
-//             [...Array(Object.keys(props.tablet).length)].map((n, i) => /*#__PURE__*/React.createElement('div', {className: "event", key: i},
-//             React.createElement('span', {className: "event-label"}, Object.values(props.tablet)[i]))))
-//         )
-// }
+function EventCard(props){
+    return (
+            /*#__PURE__*/React.createElement("div", {className: "event-container"},
+            [...Array(Object.keys(props.tablet).length)].map((n, i) => /*#__PURE__*/React.createElement('div', {className: "event", key: i},
+            React.createElement('span', {className: "event-label"}, Object.values(props.tablet)[i]))))
+        )
+}
 
 
 table = {
@@ -24,23 +24,24 @@ table = {
     '21:20-22:30': ['Рефлексия', 'место'],
 }
 
-// const app = /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(TimeCard, {
-//         tablet: table
-//     }), /*#__PURE__*/React.createElement(EventCard, {
-//         tablet: table
-//     })
-// );
+const app = /*#__PURE__*/React.createElement(React.Fragment, null, /*#__PURE__*/React.createElement(TimeCard, {
+        tablet: table
+    }), /*#__PURE__*/React.createElement(EventCard, {
+        tablet: table
+    })
+);
 
-//ReactDOM.render(app, document.getElementsByClassName('time-event-container')[0]);
+ReactDOM.render(app, document.getElementsByClassName('time-event-container')[0]);
 
 
-
+/*
 function TimeCardJS(props){
     for(let key in table){
         console.log(table[key][0])
         let el = document.createElement('div')
+        el.className = "event-container"
         el.innerHTML = table[key][0]
-        document.body.insertBefore(props, el);
+        props.append(el);
     }
     
 }
@@ -48,4 +49,5 @@ function TimeCardJS(props){
 let time_event_container = document.getElementsByClassName('time-event-container')
 
 
-//TimeCardJS(time_event_container[0])
+TimeCardJS(time_event_container[0])
+*/

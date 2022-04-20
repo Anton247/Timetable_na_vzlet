@@ -1,0 +1,271 @@
+@font-face {
+    font-family: "Exo2-Regular";
+    src: url("../fonts/Exo2-Regular.ttf") format("opentype");
+    }
+  @font-face {
+    font-family: "Exo2-Medium";
+    src: url("../fonts/Exo2-Medium.ttf") format("opentype");
+    }
+  
+
+#main_logo{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 70%;
+    height: 70%;
+    max-width: 85%;
+    min-height: 50%;
+    max-height: 85%;
+    z-index: 1;
+  }
+  
+ 
+  
+  #bg_header, #text_header, #flight_header{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  
+  #text_header img{
+    width: 45%;
+    margin-left: 3%;
+    margin-top: 3%;
+  }
+  
+  #flight_header{
+    margin-left: 2%;
+    margin-top: 2%;
+    width: 80%;
+    animation: clip 10s infinite; /* Анимация */
+  }
+  @keyframes clip {
+    from { clip: rect(auto, 0, auto, 0); }   
+    to { clip: rect(auto, 6200px, auto, 0); }  
+   }
+  
+.logo_img{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+  }
+  
+
+html {
+    height: 100%;
+    font-family: "Exo2-Regular";
+    color: black
+  }
+  
+  body {
+    margin: 0;
+    /*color: #fff;*/
+    /* Растягиваем body по высоте html */
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+  }
+  
+  header {
+    /*background: blue;*/
+    text-align: right;
+    font-size: 40px;
+    padding-top: 20px;
+    padding-right: 30px;
+    color: #0e53a0
+  }
+  
+  main {
+    /*background: red;*/
+  }
+  
+  footer {
+    /*background: black;*/
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .clock {
+    font-size: 60px;
+    vertical-align: bottom;
+    display: flex;
+    align-items: flex-end;
+    padding-bottom: 50px;
+    padding-left: 50px;
+  }
+
+
+
+  #program{
+    font-size: 80px;
+    font-family: "Exo2-Medium";
+  }
+  #flight{
+    font-family: "Exo2-Medium";
+  }
+
+  .root {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: 30px;
+    width: 95%;
+    float:right;
+    padding-top: 1%;
+    text-align: center;
+  }
+  
+  .container-container{
+    text-align: center;
+  }
+
+.place-container{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+
+.place{
+    display: flex;
+    height: 100%;
+    padding: 10px;
+    min-height: 50px;
+}
+
+  .day-container {
+    display: flex;
+    justify-content: center;
+    color: #d71e2e;
+    font-family: "Exo2-Medium";
+    font-size: 50px;
+  }
+
+  .time-container{
+      display: flex;
+      flex-direction: column;
+      align-items: stretch;
+  }
+  .time{
+      display: flex;
+      padding: 10px;
+      min-width: 170px;
+      min-height: 50px;
+  }
+
+  .event-container{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    text-align: center;
+}
+.event{
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    min-height: 50px;
+}
+
+
+  
+  .container-container {
+    display: flex;
+    justify-content: center;
+    
+    padding-left: 13%;
+  }
+  
+  .time-event-container {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    text-align: center;
+  }
+  
+  .event {
+    text-align: center;
+  }
+  
+  .event-label {
+    /*width:25%;
+    max-width:25%;*/
+  }
+
+  .place-label{
+      display: flex;
+      height: 100%;
+  }
+  
+  .time {
+    text-align: center;
+  }
+
+.QR_img:first-child{
+    padding-right: 200px;
+}
+
+.QR_img{
+      height: 250px;
+      padding-right: 50px;
+
+  }
+
+
+
+  table {
+    display: grid;
+    border-collapse: collapse;
+    padding-left: 25%;
+    width: 95%;
+    text-align: center;
+    font-size: 30px;
+    grid-template-columns: 
+      minmax(150px, 1fr)
+      minmax(150px, 1.67fr)
+      minmax(150px, 1.67fr)
+  }
+
+  thead,
+  tbody,
+  tr {
+    display: contents;
+  }
+  
+  th,
+  td {
+    padding: 15px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  th {
+    position: sticky;
+    top: 0;
+    background: #0e53a0;
+    font-weight: normal;
+    font-size: 3.1rem;
+    color: white;
+  }
+  
+  th:last-child {
+    border: 0;
+  }
+  
+  td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #000000;
+  }
+  
+  tr:nth-child(even) td {
+    background: #f8f6ff;
+  }
+
+  .center{
+      display: inline-block; 
+      text-align: left;
+    }

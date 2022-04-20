@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style_grid.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+
+    <div id="main_logo">
+        <div id="bg_header">
+            <img class = "logo_img" src="img/01.png" alt="">
+        </div>
+        <div id="text_header">
+            <img class = "logo_img" src="img/02.png" alt="">
+        </div>
+        <div id="flight_header">
+            <img class = "logo_img" src="img/03.png" alt="">
+        </div>
+    </div>
+
+    <header>
+        <span id="program"><b>ПРОГРММА</b></span> <br>
+            МЕЖРЕГИОНАЛЬНОГО МНОГОПРОФИЛЬНОГО <br>
+            ХАКАТОНА <span id="flight"></span><b>«НА ВЗЛЁТ»!</b></span> <br>
+            г.Новосибирск
+      </header>
+
+      <main role="main">
+        <div class="root">
+            <div class="container-container">
+                <div class="time-event-container"></div>
+            </div>
+        </div>
+
+        <table id = "main_table">
+            <thead>
+                <tr></tr>
+                <tr><div class="day-container"></div></tr>
+                <tr></tr>
+              <tr>
+                <th>Время</th>
+                <th></th>
+                <th>Место</th>
+              </tr>
+            </thead>
+            <tbody id="main_body">
+            </tbody>
+          </table>
+
+      </main>
+
+
+
+
+      <footer role="contentinfo">
+        
+        <div class="clock"></div>
+        <div class="QR">
+            <img class = "QR_img" src="img/vk.png" alt="vk">
+            <img class = "QR_img" src="img/tg.png" alt="vk">
+        </div>
+      </footer>
+
+</body>
+
+<script src="js/clock.js"></script>     <!-- часы -->
+<script src="js/day.js"></script>       <!-- обновление дня и даты -->
+<script src="js/flight.js"></script>    <!-- тестовый скрипт (пока не работает) -->
+<script src="js/index copy.js"></script>
+<script src="js/time.js"></script>
+</html>

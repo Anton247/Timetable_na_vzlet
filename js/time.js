@@ -1,5 +1,6 @@
 let times = document.getElementsByClassName('time-label')
 let events = document.getElementsByClassName('event-label')
+let place = document.getElementsByClassName('place-label')
 let a;
 
 function time_change(){
@@ -42,11 +43,19 @@ function time_change(){
                 } else { continue }
             }
             for (let j = 0; j<times.length; j++) {
-                times[j].style.backgroundColor = 'white';
-                events[j].style.backgroundColor = 'white';    
+                times[j].style.backgroundColor = 'transparent';
+                events[j].style.backgroundColor = 'transparent';  
+                place[j].style.backgroundColor = 'transparent';
+                times[j].style.color = 'black';
+                events[j].style.color = 'black';  
+                place[j].style.color = 'black';   
             }
-            times[i].style.backgroundColor = 'cyan';
-            events[i].style.backgroundColor = 'cyan';
+            times[i].style.backgroundColor = '#185698';
+            events[i].style.backgroundColor = '#185698';
+            place[i].style.backgroundColor = '#185698'
+            times[i].style.color = 'white';
+            events[i].style.color = 'white';
+            place[i].style.color = 'white'
 
             break
         }
