@@ -8,7 +8,8 @@ function time_change(){
         let date = new Date()
         let hours = date.getHours()
         let minutes = date.getMinutes()
-    
+        // hours = 10
+        // minutes = 0
         // console.log(hours)
         // console.log(minutes)
     
@@ -29,36 +30,34 @@ function time_change(){
         // console.log("time1_minutes", time1_minutes)
         // console.log("time2_hours", time2_hours)
         // console.log("time2_minutes", time2_minutes)
-    
-        if ((hours >= time1_hours && hours <= time2_hours)){
-            if (hours == time1_hours && hours == time2_hours){
-                if (minutes >= time1_minutes){
-                    if (minutes <= time2_minutes) {
-    
-                    } else { continue }
-                } else { continue }
-            } else if (hours == time2_hours) {
-                if (minutes <= time2_minutes) {
-    
-                } else { continue }
-            }
-            for (let j = 0; j<times.length; j++) {
-                times[j].style.backgroundColor = 'transparent';
-                events[j].style.backgroundColor = 'transparent';  
-                place[j].style.backgroundColor = 'transparent';
-                times[j].style.color = 'black';
-                events[j].style.color = 'black';  
-                place[j].style.color = 'black';   
-            }
-            times[i].style.backgroundColor = '#185698';
-            events[i].style.backgroundColor = '#185698';
-            place[i].style.backgroundColor = '#185698'
-            times[i].style.color = 'white';
-            events[i].style.color = 'white';
-            place[i].style.color = 'white'
-
-            break
+        
+        h1min = time1_hours * 60 + time1_minutes;
+        h2min = time2_hours * 60 + time2_minutes;
+        hmin = hours * 60 + minutes;
+        
+        if (hmin >= h1min && hmin <= h2min){
+            
+                times[i].style.backgroundColor = '#185698';
+                events[i].style.backgroundColor = '#185698';
+                place[i].style.backgroundColor = '#185698'
+                times[i].style.color = 'white';
+                events[i].style.color = 'white';
+                place[i].style.color = 'white'
+                events[i].style.fontWeight = 'bold';
+                place[i].style.fontWeight = 'bold';
+                continue
+            
         }
+
+        times[i].style.backgroundColor = 'transparent';
+        events[i].style.backgroundColor = 'transparent';  
+        place[i].style.backgroundColor = 'transparent';
+        times[i].style.color = 'black';
+        events[i].style.color = 'black';  
+        place[i].style.color = 'black';
+        events[i].style.fontWeight = 'normal';
+        place[i].style.fontWeight = 'normal';   
+            
     }
 }   
 time_change()
