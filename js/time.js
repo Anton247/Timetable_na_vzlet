@@ -2,7 +2,7 @@ let times = document.getElementsByClassName('time-label')
 let events = document.getElementsByClassName('event-label')
 let place = document.getElementsByClassName('place-label')
 let a;
-let play = 0;
+let play = 1;
 
 function time_change(){
     let time_min = 0;
@@ -74,20 +74,26 @@ function time_change(){
         place[i].style.fontWeight = 'normal';         
     }
 
-    if(check == 0 &&  abs(cur_time - time_min) > 2 && play == 0){
+    if(check == 0 &&  time_min - cur_time > 2){
         let elem = document.getElementById("video_source");
-        elem.src = "videos/Заставка _01.mp4"
+        //elem.src = "videos/Заставка _01.mp4"
         play = 1
+        elem = document.getElementById("gedsamolesan");
+        elem.style.opacity = '1'
     }
-    else if(check == 0 &&  abs(cur_time - time_max) > 2 && play == 0){
+    else if(check == 0 &&  cur_time - time_max > 2){
         let elem = document.getElementById("video_source");
-        elem.src = "videos/Заставка _01.mp4"
+        //elem.src = "videos/Заставка _01.mp4"
         play = 1
+        elem = document.getElementById("gedsamolesan");
+        elem.style.opacity = '1'
     }
-    else if(check != 0 && play == 1){
+    else if(check != 0){
         let elem = document.getElementById("video_source");
-        elem.src = ""
-        play = 0
+        //elem.src = ""
+        elem = document.getElementById("gedsamolesan");
+        elem.style.opacity = '0'
+        play = 0;
     }
 }   
 time_change()
