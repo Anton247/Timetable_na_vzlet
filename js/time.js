@@ -74,14 +74,14 @@ function time_change(){
         place[i].style.fontWeight = 'normal';         
     }
 
-    if(check == 0 &&  time_min - cur_time > 5){
+    if(check == 0 &&  time_min - cur_time > 2){
         let elem = document.getElementById("video_source");
         //elem.src = "videos/Заставка _01.mp4"
         play = 1
         elem = document.getElementById("gedsamolesan");
         elem.style.opacity = '1'
     }
-    else if(check == 0 &&  cur_time - time_max > 5){
+    else if(check == 0 &&  cur_time - time_max > 2){
         let elem = document.getElementById("video_source");
         //elem.src = "videos/Заставка _01.mp4"
         play = 1
